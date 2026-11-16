@@ -1,0 +1,212 @@
+/* Monochrome greys with a single orange-red accent (same palette as the Jamba Planner). */
+:root {
+	--bg: #f5f5f5;
+	--panel: #fff;
+	--text: #171717;
+	--muted: #6b6b6b;
+	--line: #e0e0e0;
+	--accent: #cf3b0c;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #121212;
+		--panel: #1c1c1c;
+		--text: #ececec;
+		--muted: #a3a3a3;
+		--line: #333;
+		--accent: #ff5a24;
+	}
+}
+* {
+	box-sizing: border-box;
+}
+/* The device's own UI font: San Francisco on Apple, Segoe UI on Windows,
+   Roboto on Android/ChromeOS, then common fallbacks and emoji fonts. */
+:root {
+	--font-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+		"Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+}
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font: 15px/1.45 var(--font-system);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+main {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 24px 16px 48px;
+}
+.muted {
+	color: var(--muted);
+}
+.panel {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	padding: 16px;
+}
+/* Form controls and tables don't always inherit the page font, so force it. */
+button,
+input,
+select,
+textarea,
+table {
+	font: inherit;
+}
+button {
+	width: 100%;
+	margin-top: 12px;
+	padding: 9px;
+	border-radius: 6px;
+	border: 1px solid var(--accent);
+	cursor: pointer;
+}
+/* Secondary buttons: grey border, panel fill, normal text. */
+button.secondary {
+	padding: 7px 6px;
+	line-height: normal;
+	border-color: var(--line);
+	background: var(--panel);
+	color: var(--text);
+}
+button.secondary:hover:not(:disabled) {
+	border-color: var(--muted);
+}
+button:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+/* Small inline button (the storage filters). */
+button.compact { width: auto; margin: 0; padding: 5px 12px; }
+.small { font-size: 0.82rem; }
+.legend { margin-top: 10px; line-height: 1.7; }
+.tag { display: inline-block; margin-left: 4px; padding: 0 4px; border-radius: 3px; font-size: 0.66rem; font-weight: 700; text-transform: uppercase; }
+.tag.day { background: var(--line); color: var(--text); }
+:root { accent-color: var(--accent); }
+/* Let the hidden attribute win over display rules. */
+[hidden] { display: none !important; }
+
+/* ---------- Header ---------- */
+.dd-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.dd-head h1 { margin: 2px 0 0; font-size: 1.3rem; }
+.dd-strip { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 8px; margin-bottom: 16px; }
+@media (max-width: 640px) { .dd-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.dd-day {
+	display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px;
+	background: var(--panel); border: 1px solid var(--line); border-radius: 8px; font-size: 0.78rem; text-align: center;
+}
+.dd-day.today { border-color: var(--accent); }
+.dd-day-date { font-weight: 600; }
+
+/* ---------- Filters and search ---------- */
+.dd-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+.dd-filters { display: flex; gap: 6px; }
+.dd-filters button[aria-pressed="true"] { border-color: var(--text); font-weight: 600; }
+#dd-search {
+	flex: 1; min-width: 160px; padding: 4px 10px; border-radius: 6px;
+	border: 1px solid var(--line); background: var(--panel); color: var(--text);
+}
+
+/* ---------- Table ---------- */
+.dd-wrap { padding: 0; }
+#dd-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+#dd-table th, #dd-table td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+#dd-table thead th { font-size: 0.75rem; font-weight: 600; color: var(--muted); background: var(--bg); }
+#dd-table tr.dd-group th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); background: var(--bg); }
+#dd-table .small { margin-top: 2px; }
+#dd-empty { padding: 16px; }
+
+#dd-table .tag.day { vertical-align: 1px; font-weight: 600; }
+.dd-alias { color: var(--accent); font-weight: 600; }
+
+/* ---------- Day-dot sticker (octagon) ---------- */
+:root {
+	--sticker-body: #fff;
+	--sticker-text: #000;
+	--sticker-rim: #cfcfcf;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--sticker-body: #333;
+		--sticker-text: #fff;
+		--sticker-rim: #5c5c5c;
+	}
+}
+.sticker {
+	/* Set here, not on :root, because --dot is only defined on each sticker. */
+	--sticker-band-rim: color-mix(in srgb, var(--dot) 78%, #000);
+	--size: 60px;
+	--cut: 20%;
+	--octagon: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
+	display: inline-block;
+	flex: none;
+	width: var(--size);
+	height: var(--size);
+	padding: 1px; /* 1px rim, same as the other borders */
+	clip-path: var(--octagon);
+	/* Rim: darker band colour around the top, grey around the body. */
+	background: linear-gradient(to bottom, var(--sticker-band-rim) 0 34%, var(--sticker-rim) 34% 100%);
+}
+.sticker.small { --size: 46px; }
+@media (prefers-color-scheme: dark) {
+	.sticker { --sticker-band-rim: color-mix(in srgb, var(--dot) 70%, #fff); }
+}
+.sticker-face {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	clip-path: var(--octagon);
+	background: var(--sticker-body);
+}
+.sticker-day {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	height: 34%;
+	padding-bottom: 1px;
+	background: var(--dot);
+	color: var(--dot-ink);
+	font-size: calc(var(--size) * 0.2);
+	font-weight: 800;
+	line-height: 1;
+	letter-spacing: 0.02em;
+}
+.sticker-date {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: calc(var(--size) * 0.08);
+	color: var(--sticker-text);
+	font-size: calc(var(--size) * 0.26);
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	letter-spacing: -0.02em;
+}
+.sticker-none {
+	display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px;
+	color: var(--muted); border: 1px dashed var(--line); border-radius: 8px;
+}
+
+/* Expandable Day Dots rows */
+#dd-table tr.dd-item { cursor: pointer; }
+#dd-table tr.dd-item:hover td { background: color-mix(in srgb, var(--text) 4%, transparent); }
+#dd-table tr.dd-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+#dd-table tr.dd-item.open td { border-bottom-color: transparent; }
+#dd-table tr.dd-detail td { padding: 0 10px 12px 10px; background: color-mix(in srgb, var(--text) 3%, transparent); }
+tr.dd-detail ol { margin: 0; padding: 8px 0 0 18px; display: grid; gap: 8px; font-size: 0.84rem; }
+.dd-detail-step { color: var(--muted); }
+.dd-detail-step b { color: var(--text); }
+
+/* Name and dots share one cell per row, so each name gets whatever width its own dots leave. */
+.dd-row { display: flex; align-items: center; gap: 12px; }
+.dd-name { flex: 1; min-width: 0; }
+#dd-table th.dd-steps { text-align: right; }
+.dd-step-row { flex: none; display: flex; align-items: flex-start; justify-content: flex-end; gap: 8px; }
+.dd-stage { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.dd-stage figcaption { font-size: 0.72rem; font-weight: 600; color: var(--muted); }
+tr.dd-detail .dd-includes { padding-top: 8px; font-size: 0.84rem; }

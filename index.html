@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Day Dots</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="dd-head">
+				<div>
+					<span class="muted small">Opened or prepped now</span>
+					<h1 id="dd-now"></h1>
+				</div>
+				<span class="muted small">From the <span id="dd-source"></span></span>
+			</div>
+
+			<div id="dd-strip" class="dd-strip" aria-label="Day-dot colour for today and the next 7 days"></div>
+
+			<div class="dd-tools">
+				<div id="dd-filters" class="dd-filters" role="group" aria-label="Storage">
+					<button class="secondary compact" data-filter="all" aria-pressed="true">All</button>
+					<button class="secondary compact" data-filter="fridge" aria-pressed="false">Fridge</button>
+					<button class="secondary compact" data-filter="dry" aria-pressed="false">Dry</button>
+					<button class="secondary compact" data-filter="freezer" aria-pressed="false">Freezer</button>
+				</div>
+				<input type="search" id="dd-search" placeholder="Search items" aria-label="Search items" />
+			</div>
+
+			<div class="panel dd-wrap">
+				<table id="dd-table">
+					<thead></thead>
+					<tbody></tbody>
+				</table>
+				<div id="dd-empty" class="muted" hidden>No items match.</div>
+			</div>
+
+			<p class="muted small legend">
+				Read each row left to right: the first dot goes on when the step happens (e.g. thawed in the walk-in), and
+				is replaced by the next dot at the next step (e.g. opened). Dates assume the step happens now. Day-based
+				dates are good through end of day. Tap a row for the step, shelf life and exact expiry time. Always use the
+				package use-by date if it's sooner.
+			</p>
+		</main>
+		<script src="daydots.js"></script>
+	</body>
+</html>
