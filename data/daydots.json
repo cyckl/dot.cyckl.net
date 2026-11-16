@@ -64,11 +64,12 @@
 		{
 			"id": "concentrates",
 			"name": "Juice Concentrates",
-			"detail": "Apple Strawberry, Lemonade, Mixed Berry, Passion Mango, Peach, Pineapple, Watermelon",
+			"detail": "Apple Strawberry, Lemonade, Mixed Berry, Orange Juice, Passion Mango, Peach, Pineapple, Watermelon",
 			"aliases": [
 				"Apple Strawberry",
 				"Lemonade",
 				"Mixed Berry",
+				"Orange Juice",
 				"Passion Mango",
 				"Peach",
 				"Pineapple",
