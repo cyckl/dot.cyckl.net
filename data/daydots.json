@@ -1,183 +1,692 @@
 {
 	"source": "June 2026 Shelf-Life Chart",
 	"dotColors": {
-		"Mon": {"name": "Blue", "hex": "#1f5fd1"},
-		"Tue": {"name": "Yellow", "hex": "#f2c300"},
-		"Wed": {"name": "Red", "hex": "#d42a2a"},
-		"Thu": {"name": "Brown", "hex": "#7b4a24"},
-		"Fri": {"name": "Green", "hex": "#2b9a46"},
-		"Sat": {"name": "Orange", "hex": "#f07c12"},
-		"Sun": {"name": "Black", "hex": "#111111"}
+		"Mon": { "name": "Blue", "hex": "#1f5fd1" },
+		"Tue": { "name": "Yellow", "hex": "#f2c300" },
+		"Wed": { "name": "Red", "hex": "#d42a2a" },
+		"Thu": { "name": "Brown", "hex": "#7b4a24" },
+		"Fri": { "name": "Green", "hex": "#2b9a46" },
+		"Sat": { "name": "Orange", "hex": "#f07c12" },
+		"Sun": { "name": "Black", "hex": "#111111" }
 	},
-	"searchNicknames": {"oj": "orange juice", "pango": "passion mango", "pitaya": "dragonfruit", "dragon fruit": "dragonfruit"},
-	"categories": ["Concentrates", "Milks", "Hand-Mixed", "Thaw & Serve", "Iced Beverages", "Grab & Go", "Toppings", "Misc.", "Fresh Produce", "Prepared Juice", "IQF Fruit & Bases"],
+	"searchNicknames": {
+		"oj": "orange juice",
+		"pango": "passion mango",
+		"pitaya": "dragonfruit",
+		"dragon fruit": "dragonfruit"
+	},
+	"categories": [
+		"Concentrates",
+		"Milks",
+		"Hand-Mixed",
+		"Thaw & Serve",
+		"Iced Beverages",
+		"Grab & Go",
+		"Toppings",
+		"Misc.",
+		"Fresh Produce",
+		"Prepared Juice",
+		"IQF Fruit & Bases"
+	],
 	"items": [
-		{"id": "milk-2", "name": "2% Milk", "category": "Milks", "storage": "fridge", "steps": [
-			{"label": "Opened", "life": {"amount": 7, "unit": "days"}}
-		] },
-		{"id": "acai-concentrate", "name": "Açaí Juice Concentrate", "category": "Concentrates", "storage": "fridge", "steps": [
-			{"label": "Thawed in walk-in", "life": {"amount": 30, "unit": "days"}, "note": "Or package use-by, if sooner."},
-			{"label": "Opened", "life": {"amount": 14, "unit": "days"}}
-		] },
-		{"id": "almondmilk", "name": "Almondmilk", "category": "Milks", "storage": "fridge", "steps": [
-			{"label": "Opened", "life": {"amount": 7, "unit": "days"}}
-		] },
-		{"id": "concentrates", "name": "Juice Concentrates", "detail": "Apple Strawberry, Lemonade, Mixed Berry, Passion Mango, Peach, Pineapple, Watermelon", "aliases": ["Apple Strawberry", "Lemonade", "Mixed Berry", "Passion Mango", "Peach", "Pineapple", "Watermelon"], "category": "Concentrates", "storage": "fridge", "steps": [
-			{"label": "Thawed in walk-in", "life": {"amount": 30, "unit": "days"}, "note": "Or package use-by, if sooner."},
-			{"label": "Opened", "life": {"amount": 14, "unit": "days"}}
-		] },
-		{"id": "hand-mixed-juices", "name": "Hand Mixed Juices", "aliases": ["Açaí", "Apple Strawberry", "Lemonade", "Mixed Berry", "Passion Mango", "Peach", "Pineapple", "Watermelon"], "category": "Hand-Mixed", "storage": "fridge", "steps": [
-			{"label": "Mixed", "life": {"amount": 5, "unit": "days"}}
-		] },
-		{"id": "hand-mixed-soymilk", "name": "Hand Mixed Soymilk", "category": "Hand-Mixed", "storage": "fridge", "steps": [
-			{"label": "Mixed", "life": {"amount": 5, "unit": "days"}}
-		] },
-		{"id": "oatmilk", "name": "Oatmilk", "category": "Milks", "storage": "fridge", "steps": [
-			{"label": "Opened", "life": {"amount": 7, "unit": "days"}}
-		] },
-		{"id": "soymilk-concentrate", "name": "Soymilk Concentrate", "category": "Milks", "storage": "fridge", "steps": [
-			{"label": "Opened", "life": {"amount": 5, "unit": "days"}}
-		] },
-		{"id": "vanilla-coconutmilk", "name": "Vanilla Coconutmilk", "category": "Milks", "storage": "fridge", "steps": [
-			{"label": "Opened", "life": {"amount": 7, "unit": "days"}}
-		] },
+		{
+			"id": "milk-2",
+			"name": "2% Milk",
+			"category": "Milks",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Opened", "life": { "amount": 7, "unit": "days" } }
+			]
+		},
+		{
+			"id": "acai-concentrate",
+			"name": "Açaí Juice Concentrate",
+			"category": "Concentrates",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Thawed in walk-in",
+					"life": { "amount": 30, "unit": "days" },
+					"note": "Or package use-by, if sooner."
+				},
+				{ "label": "Opened", "life": { "amount": 14, "unit": "days" } }
+			]
+		},
+		{
+			"id": "almondmilk",
+			"name": "Almondmilk",
+			"category": "Milks",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Opened", "life": { "amount": 7, "unit": "days" } }
+			]
+		},
+		{
+			"id": "concentrates",
+			"name": "Juice Concentrates",
+			"detail": "Apple Strawberry, Lemonade, Mixed Berry, Passion Mango, Peach, Pineapple, Watermelon",
+			"aliases": [
+				"Apple Strawberry",
+				"Lemonade",
+				"Mixed Berry",
+				"Passion Mango",
+				"Peach",
+				"Pineapple",
+				"Watermelon"
+			],
+			"category": "Concentrates",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Thawed in walk-in",
+					"life": { "amount": 30, "unit": "days" },
+					"note": "Or package use-by, if sooner."
+				},
+				{ "label": "Opened", "life": { "amount": 14, "unit": "days" } }
+			]
+		},
+		{
+			"id": "hand-mixed-juices",
+			"name": "Hand Mixed Juices",
+			"aliases": [
+				"Açaí",
+				"Apple Strawberry",
+				"Lemonade",
+				"Mixed Berry",
+				"Passion Mango",
+				"Peach",
+				"Pineapple",
+				"Watermelon"
+			],
+			"category": "Hand-Mixed",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Mixed", "life": { "amount": 5, "unit": "days" } }
+			]
+		},
+		{
+			"id": "hand-mixed-soymilk",
+			"name": "Hand Mixed Soymilk",
+			"category": "Hand-Mixed",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Mixed", "life": { "amount": 5, "unit": "days" } }
+			]
+		},
+		{
+			"id": "oatmilk",
+			"name": "Oatmilk",
+			"category": "Milks",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Opened", "life": { "amount": 7, "unit": "days" } }
+			]
+		},
+		{
+			"id": "soymilk-concentrate",
+			"name": "Soymilk Concentrate",
+			"category": "Milks",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Opened", "life": { "amount": 5, "unit": "days" } }
+			]
+		},
+		{
+			"id": "vanilla-coconutmilk",
+			"name": "Vanilla Coconutmilk",
+			"category": "Milks",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Opened", "life": { "amount": 7, "unit": "days" } }
+			]
+		},
 
-		{"id": "apple-cinnamon-pretzel", "name": "Apple Cinnamon Pretzel", "category": "Thaw & Serve", "storage": "fridge", "steps": [
-			{"label": "Pulled to thaw", "life": {"amount": 84, "unit": "hours"}, "note": "Includes thaw time. +2 h for sampling only."}
-		] },
-		{"id": "sourdough-parmesan-pretzel", "name": "Sourdough Parmesan Pretzel", "category": "Thaw & Serve", "storage": "fridge", "steps": [
-			{"label": "Pulled to thaw", "life": {"amount": 84, "unit": "hours"}, "note": "Includes thaw time. +2 h for sampling only."}
-		] },
-		{"id": "empanadas", "name": "Empanadas", "category": "Thaw & Serve", "storage": "fridge", "steps": [
-			{"label": "Pulled to thaw", "life": {"amount": 84, "unit": "hours"}, "note": "Includes thaw time. +2 h for sampling only."}
-		] },
-		{"id": "mozzarella-bites", "name": "Mozzarella Bites", "category": "Thaw & Serve", "storage": "fridge", "steps": [
-			{"label": "Pulled to thaw", "life": {"amount": 84, "unit": "hours"}, "note": "Includes thaw time. +2 h for sampling only."}
-		] },
-		{"id": "handwiches", "name": "Handwiches", "category": "Thaw & Serve", "storage": "fridge", "steps": [
-			{"label": "Pulled to thaw", "life": {"amount": 84, "unit": "hours"}, "note": "Includes thaw time. +2 h for sampling only."}
-		] },
-		{"id": "belgian-style-waffle", "name": "Belgian-Style Waffle", "category": "Thaw & Serve", "storage": "fridge", "steps": [
-			{"label": "Pulled to thaw", "life": {"amount": 84, "unit": "hours"}, "note": "Includes thaw time. +2 h for sampling only."}
-		] },
-		{"id": "coconut-whip", "name": "Coconut Whip", "category": "Thaw & Serve", "storage": "fridge", "steps": [
-			{"label": "Thawed or opened", "life": {"amount": 10, "unit": "days"}}
-		] },
-		{"id": "oatmeal", "name": "Oatmeal", "category": "Thaw & Serve", "storage": "fridge", "steps": [
-			{"label": "Pulled to thaw", "life": {"amount": 72, "unit": "hours"}, "note": "Includes thaw time."}
-		] },
+		{
+			"id": "apple-cinnamon-pretzel",
+			"name": "Apple Cinnamon Pretzel",
+			"category": "Thaw & Serve",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Pulled to thaw",
+					"life": { "amount": 84, "unit": "hours" },
+					"note": "Includes thaw time. +2 h for sampling only."
+				}
+			]
+		},
+		{
+			"id": "sourdough-parmesan-pretzel",
+			"name": "Sourdough Parmesan Pretzel",
+			"category": "Thaw & Serve",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Pulled to thaw",
+					"life": { "amount": 84, "unit": "hours" },
+					"note": "Includes thaw time. +2 h for sampling only."
+				}
+			]
+		},
+		{
+			"id": "empanadas",
+			"name": "Empanadas",
+			"category": "Thaw & Serve",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Pulled to thaw",
+					"life": { "amount": 84, "unit": "hours" },
+					"note": "Includes thaw time. +2 h for sampling only."
+				}
+			]
+		},
+		{
+			"id": "mozzarella-bites",
+			"name": "Mozzarella Bites",
+			"category": "Thaw & Serve",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Pulled to thaw",
+					"life": { "amount": 84, "unit": "hours" },
+					"note": "Includes thaw time. +2 h for sampling only."
+				}
+			]
+		},
+		{
+			"id": "handwiches",
+			"name": "Handwiches",
+			"category": "Thaw & Serve",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Pulled to thaw",
+					"life": { "amount": 84, "unit": "hours" },
+					"note": "Includes thaw time. +2 h for sampling only."
+				}
+			]
+		},
+		{
+			"id": "belgian-style-waffle",
+			"name": "Belgian-Style Waffle",
+			"category": "Thaw & Serve",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Pulled to thaw",
+					"life": { "amount": 84, "unit": "hours" },
+					"note": "Includes thaw time. +2 h for sampling only."
+				}
+			]
+		},
+		{
+			"id": "coconut-whip",
+			"name": "Coconut Whip",
+			"category": "Thaw & Serve",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Thawed or opened",
+					"life": { "amount": 10, "unit": "days" }
+				}
+			]
+		},
+		{
+			"id": "oatmeal",
+			"name": "Oatmeal",
+			"category": "Thaw & Serve",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Pulled to thaw",
+					"life": { "amount": 72, "unit": "hours" },
+					"note": "Includes thaw time."
+				}
+			]
+		},
 
-		{"id": "cloud-whip", "name": "Cloud Whip", "category": "Iced Beverages", "storage": "fridge", "steps": [
-			{"label": "Prepped", "life": {"amount": 48, "unit": "hours"}}
-		] },
-		{"id": "protein-cloud-whip", "name": "Protein Cloud Whip", "category": "Iced Beverages", "storage": "fridge", "steps": [
-			{"label": "Prepped", "life": {"amount": 48, "unit": "hours"}}
-		] },
-		{"id": "mixes", "name": "Mixes", "detail": "Blue Spirulina, Dragonfruit", "aliases": ["Blue Spirulina", "Dragonfruit"], "category": "Iced Beverages", "storage": "fridge", "steps": [
-			{"label": "Prepped", "life": {"amount": 5, "unit": "days"}}
-		] },
-		{"id": "purees", "name": "Purees", "detail": "Strawberry, Mango", "aliases": ["Strawberry", "Mango"], "category": "Iced Beverages", "storage": "fridge", "steps": [
-			{"label": "Prepped", "life": {"amount": 3, "unit": "days"}}
-		] },
+		{
+			"id": "cloud-whip",
+			"name": "Cloud Whip",
+			"category": "Iced Beverages",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Prepped",
+					"life": { "amount": 48, "unit": "hours" }
+				}
+			]
+		},
+		{
+			"id": "protein-cloud-whip",
+			"name": "Protein Cloud Whip",
+			"category": "Iced Beverages",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Prepped",
+					"life": { "amount": 48, "unit": "hours" }
+				}
+			]
+		},
+		{
+			"id": "mixes",
+			"name": "Mixes",
+			"detail": "Blue Spirulina, Dragonfruit",
+			"aliases": ["Blue Spirulina", "Dragonfruit"],
+			"category": "Iced Beverages",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Prepped", "life": { "amount": 5, "unit": "days" } }
+			]
+		},
+		{
+			"id": "purees",
+			"name": "Purees",
+			"detail": "Strawberry, Mango",
+			"aliases": ["Strawberry", "Mango"],
+			"category": "Iced Beverages",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Prepped", "life": { "amount": 3, "unit": "days" } }
+			]
+		},
 
-		{"id": "fruit-cup", "name": "Fruit Cup", "category": "Grab & Go", "storage": "fridge", "steps": [
-			{"label": "Prepped", "life": {"amount": 48, "unit": "hours"}}
-		] },
-		{"id": "protein-bites", "disabled": true, "disabledReason": "Not stocked", "name": "PB + Chocolate Chip Protein Bites", "category": "Grab & Go", "storage": "fridge", "steps": [
-			{"label": "Prepped", "life": {"amount": 5, "unit": "days"}}
-		] },
-		{"id": "yogurt-parfaits", "name": "Yogurt Parfaits", "category": "Grab & Go", "storage": "fridge", "steps": [
-			{"label": "Prepped", "life": {"amount": 36, "unit": "hours"}, "note": "Up to 36 hours."}
-		] },
+		{
+			"id": "fruit-cup",
+			"name": "Fruit Cup",
+			"category": "Grab & Go",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Prepped",
+					"life": { "amount": 48, "unit": "hours" }
+				}
+			]
+		},
+		{
+			"id": "protein-bites",
+			"disabled": true,
+			"disabledReason": "Not stocked",
+			"name": "PB + Chocolate Chip Protein Bites",
+			"category": "Grab & Go",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Prepped", "life": { "amount": 5, "unit": "days" } }
+			]
+		},
+		{
+			"id": "yogurt-parfaits",
+			"name": "Yogurt Parfaits",
+			"category": "Grab & Go",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Prepped",
+					"life": { "amount": 36, "unit": "hours" },
+					"note": "Up to 36 hours."
+				}
+			]
+		},
 
-		{"id": "agave-bottle", "name": "Agave", "category": "Toppings", "storage": "fridge", "steps": [
-			{"label": "Filled FIFO squeeze bottle", "life": {"amount": 14, "unit": "days"}}
-		] },
-		{"id": "coconut-flakes-dry", "name": "Coconut Flakes", "category": "Toppings", "storage": "dry", "steps": [
-			{"label": "Put in Cambro", "life": {"amount": 14, "unit": "days"}}
-		] },
-		{"id": "coconut-flakes-fridge", "name": "Coconut Flakes", "category": "Toppings", "storage": "fridge", "steps": [
-			{"label": "Opened", "life": {"amount": 3, "unit": "months"}}
-		] },
-		{"id": "granola", "name": "Granola", "category": "Toppings", "storage": "dry", "steps": [
-			{"label": "Put in Cambro", "life": {"amount": 30, "unit": "days"}}
-		] },
-		{"id": "nutella-bottle", "name": "Nutella Squeeze Bottle", "category": "Toppings", "storage": "dry", "steps": [
-			{"label": "Filled FIFO squeeze bottle", "life": {"amount": 14, "unit": "days"}}
-		] },
-		{"id": "pb-bottle", "name": "Peanut Butter Squeeze Bottle", "category": "Toppings", "storage": "dry", "steps": [
-			{"label": "Filled FIFO squeeze bottle", "life": {"amount": 14, "unit": "days"}}
-		] },
+		{
+			"id": "agave-bottle",
+			"name": "Agave",
+			"category": "Toppings",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Filled FIFO squeeze bottle",
+					"life": { "amount": 14, "unit": "days" }
+				}
+			]
+		},
+		{
+			"id": "coconut-flakes-dry",
+			"name": "Coconut Flakes",
+			"category": "Toppings",
+			"storage": "dry",
+			"steps": [
+				{
+					"label": "Put in Cambro",
+					"life": { "amount": 14, "unit": "days" }
+				}
+			]
+		},
+		{
+			"id": "coconut-flakes-fridge",
+			"name": "Coconut Flakes",
+			"category": "Toppings",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Opened", "life": { "amount": 3, "unit": "months" } }
+			]
+		},
+		{
+			"id": "granola",
+			"name": "Granola",
+			"category": "Toppings",
+			"storage": "dry",
+			"steps": [
+				{
+					"label": "Put in Cambro",
+					"life": { "amount": 30, "unit": "days" }
+				}
+			]
+		},
+		{
+			"id": "nutella-bottle",
+			"name": "Nutella Squeeze Bottle",
+			"category": "Toppings",
+			"storage": "dry",
+			"steps": [
+				{
+					"label": "Filled FIFO squeeze bottle",
+					"life": { "amount": 14, "unit": "days" }
+				}
+			]
+		},
+		{
+			"id": "pb-bottle",
+			"name": "Peanut Butter Squeeze Bottle",
+			"category": "Toppings",
+			"storage": "dry",
+			"steps": [
+				{
+					"label": "Filled FIFO squeeze bottle",
+					"life": { "amount": 14, "unit": "days" }
+				}
+			]
+		},
 
-		{"id": "moo-d-powder", "name": "Chocolate Moo'd Powder", "category": "Misc.", "storage": "dry", "steps": [
-			{"label": "Put in Cambro", "life": {"amount": 30, "unit": "days"}, "note": "In original packaging: use-by date."}
-		] },
-		{"id": "pb-dip-cups", "disabled": true, "disabledReason": "Not stocked", "name": "Peanut Butter Side Dip Cups", "category": "Misc.", "storage": "dry", "steps": [
-			{"label": "Original package opened", "life": {"amount": 14, "unit": "days"}, "note": "Or life of FIFO bottle, if sooner."}
-		] },
-		{"id": "nutella-dip-cups", "disabled": true, "disabledReason": "Not stocked", "name": "Nutella Side Dip Cups", "category": "Misc.", "storage": "dry", "steps": [
-			{"label": "Original package opened", "life": {"amount": 14, "unit": "days"}, "note": "Or life of FIFO bottle, if sooner."}
-		] },
-		{"id": "greek-yogurt", "name": "Greek Yogurt", "category": "Misc.", "storage": "fridge", "steps": [
-			{"label": "Opened", "life": {"amount": 3, "unit": "days"}}
-		] },
-		{"id": "steel-cut-oats", "name": "Steel-Cut Oats", "category": "Misc.", "storage": "dry", "steps": [
-			{"label": "Opened", "life": {"amount": 30, "unit": "days"}},
-			{"label": "In warmer", "life": {"amount": 5, "unit": "hours"}, "disabled": true, "disabledReason": "No warmer"}
-		] },
-		{"id": "thawed-pineapple", "name": "Thawed Pineapple", "category": "Misc.", "storage": "fridge", "steps": [
-			{"label": "Pulled to thaw", "life": {"amount": 48, "unit": "hours"}, "note": "Includes thaw time."}
-		] },
+		{
+			"id": "moo-d-powder",
+			"name": "Chocolate Moo'd Powder",
+			"category": "Misc.",
+			"storage": "dry",
+			"steps": [
+				{
+					"label": "Put in Cambro",
+					"life": { "amount": 30, "unit": "days" },
+					"note": "In original packaging: use-by date."
+				}
+			]
+		},
+		{
+			"id": "pb-dip-cups",
+			"disabled": true,
+			"disabledReason": "Not stocked",
+			"name": "Peanut Butter Side Dip Cups",
+			"category": "Misc.",
+			"storage": "dry",
+			"steps": [
+				{
+					"label": "Original package opened",
+					"life": { "amount": 14, "unit": "days" },
+					"note": "Or life of FIFO bottle, if sooner."
+				}
+			]
+		},
+		{
+			"id": "nutella-dip-cups",
+			"disabled": true,
+			"disabledReason": "Not stocked",
+			"name": "Nutella Side Dip Cups",
+			"category": "Misc.",
+			"storage": "dry",
+			"steps": [
+				{
+					"label": "Original package opened",
+					"life": { "amount": 14, "unit": "days" },
+					"note": "Or life of FIFO bottle, if sooner."
+				}
+			]
+		},
+		{
+			"id": "greek-yogurt",
+			"name": "Greek Yogurt",
+			"category": "Misc.",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Opened", "life": { "amount": 3, "unit": "days" } }
+			]
+		},
+		{
+			"id": "steel-cut-oats",
+			"name": "Steel-Cut Oats",
+			"category": "Misc.",
+			"storage": "dry",
+			"steps": [
+				{ "label": "Opened", "life": { "amount": 30, "unit": "days" } },
+				{
+					"label": "In warmer",
+					"life": { "amount": 5, "unit": "hours" },
+					"disabled": true,
+					"disabledReason": "No warmer"
+				}
+			]
+		},
+		{
+			"id": "thawed-pineapple",
+			"name": "Thawed Pineapple",
+			"category": "Misc.",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Pulled to thaw",
+					"life": { "amount": 48, "unit": "hours" },
+					"note": "Includes thaw time."
+				}
+			]
+		},
 
-		{"id": "bananas", "name": "Bananas", "category": "Fresh Produce", "storage": "dry", "steps": [
-			{"label": "Washed", "life": {"amount": 2, "unit": "days"}, "note": "Never use over-ripe or bruised."}
-		] },
-		{"id": "blueberries", "name": "Blueberries, whole", "category": "Fresh Produce", "storage": "fridge", "steps": [
-			{"label": "Received", "disabled": true, "disabledReason": "Not dotted at this store", "life": {"amount": 5, "unit": "days"}},
-			{"label": "Prepped", "life": {"amount": 72, "unit": "hours"}}
-		] },
-		{"id": "carrots", "disabled": true, "disabledReason": "Not stocked", "name": "Carrots", "category": "Fresh Produce", "storage": "fridge", "steps": [
-			{"label": "Opened", "life": {"amount": 7, "unit": "days"}, "note": "Discard end of day if displayed."}
-		] },
-		{"id": "ginger-puree", "name": "Ginger, puree", "category": "Fresh Produce", "storage": "fridge", "steps": [
-			{"label": "Thawed in walk-in", "life": {"amount": 21, "unit": "days"}},
-			{"label": "Opened", "life": {"amount": 21, "unit": "days"}}
-		] },
-		{"id": "ginger-whole", "disabled": true, "disabledReason": "Not stocked", "name": "Ginger, whole", "category": "Fresh Produce", "storage": "fridge", "steps": [
-			{"label": "Washed", "life": {"amount": 2, "unit": "days"}, "note": "Discard end of day if cut."}
-		] },
-		{"id": "lemons", "disabled": true, "disabledReason": "Not stocked", "name": "Lemons, whole", "category": "Fresh Produce", "storage": "fridge", "steps": [
-			{"label": "Washed", "life": {"amount": 2, "unit": "days"}, "note": "Discard end of day if cut."}
-		] },
-		{"id": "oranges", "disabled": true, "disabledReason": "Not stocked", "name": "Oranges", "category": "Fresh Produce", "storage": "fridge", "steps": [
-			{"label": "Washed", "life": {"amount": 2, "unit": "days"}, "note": "Discard end of day if cut."}
-		] },
-		{"id": "strawberries", "name": "Strawberries, whole", "aliases": ["Strawberry"], "category": "Fresh Produce", "storage": "fridge", "steps": [
-			{"label": "Received", "disabled": true, "disabledReason": "Not dotted at this store", "life": {"amount": 5, "unit": "days"}},
-			{"label": "Prepped", "life": {"amount": 48, "unit": "hours"}, "note": "DynaCube = end of day."}
-		] },
-		{"id": "strawberries-sliced", "name": "Strawberries, sliced", "aliases": ["Strawberry"], "category": "Fresh Produce", "storage": "fridge", "steps": [
-			{"label": "Sliced", "life": {"amount": 48, "unit": "hours"}}
-		] },
+		{
+			"id": "bananas",
+			"name": "Bananas",
+			"category": "Fresh Produce",
+			"storage": "dry",
+			"steps": [
+				{
+					"label": "Washed",
+					"life": { "amount": 2, "unit": "days" },
+					"note": "Never use over-ripe or bruised."
+				}
+			]
+		},
+		{
+			"id": "blueberries",
+			"name": "Blueberries, whole",
+			"category": "Fresh Produce",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Received",
+					"disabled": true,
+					"disabledReason": "Not dotted at this store",
+					"life": { "amount": 5, "unit": "days" }
+				},
+				{
+					"label": "Prepped",
+					"life": { "amount": 72, "unit": "hours" }
+				}
+			]
+		},
+		{
+			"id": "carrots",
+			"disabled": true,
+			"disabledReason": "Not stocked",
+			"name": "Carrots",
+			"category": "Fresh Produce",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Opened",
+					"life": { "amount": 7, "unit": "days" },
+					"note": "Discard end of day if displayed."
+				}
+			]
+		},
+		{
+			"id": "ginger-puree",
+			"name": "Ginger, puree",
+			"category": "Fresh Produce",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Thawed in walk-in",
+					"life": { "amount": 21, "unit": "days" }
+				},
+				{ "label": "Opened", "life": { "amount": 21, "unit": "days" } }
+			]
+		},
+		{
+			"id": "ginger-whole",
+			"disabled": true,
+			"disabledReason": "Not stocked",
+			"name": "Ginger, whole",
+			"category": "Fresh Produce",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Washed",
+					"life": { "amount": 2, "unit": "days" },
+					"note": "Discard end of day if cut."
+				}
+			]
+		},
+		{
+			"id": "lemons",
+			"disabled": true,
+			"disabledReason": "Not stocked",
+			"name": "Lemons, whole",
+			"category": "Fresh Produce",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Washed",
+					"life": { "amount": 2, "unit": "days" },
+					"note": "Discard end of day if cut."
+				}
+			]
+		},
+		{
+			"id": "oranges",
+			"disabled": true,
+			"disabledReason": "Not stocked",
+			"name": "Oranges",
+			"category": "Fresh Produce",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Washed",
+					"life": { "amount": 2, "unit": "days" },
+					"note": "Discard end of day if cut."
+				}
+			]
+		},
+		{
+			"id": "strawberries",
+			"name": "Strawberries, whole",
+			"aliases": ["Strawberry"],
+			"category": "Fresh Produce",
+			"storage": "fridge",
+			"steps": [
+				{
+					"label": "Received",
+					"disabled": true,
+					"disabledReason": "Not dotted at this store",
+					"life": { "amount": 5, "unit": "days" }
+				},
+				{
+					"label": "Prepped",
+					"life": { "amount": 48, "unit": "hours" },
+					"note": "DynaCube = end of day."
+				}
+			]
+		},
+		{
+			"id": "strawberries-sliced",
+			"name": "Strawberries, sliced",
+			"aliases": ["Strawberry"],
+			"category": "Fresh Produce",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Sliced", "life": { "amount": 48, "unit": "hours" } }
+			]
+		},
 
-		{"id": "carrot-juice", "disabled": true, "disabledReason": "Fresh juice", "name": "Carrot Juice", "category": "Prepared Juice", "storage": "fridge", "steps": [
-			{"label": "Juiced", "life": {"amount": 4, "unit": "hours"}}
-		] },
-		{"id": "orange-juice", "disabled": true, "disabledReason": "Fresh juice", "name": "Orange Juice (All Varieties)", "category": "Prepared Juice", "storage": "fridge", "steps": [
-			{"label": "Juiced", "life": {"amount": 4, "unit": "hours"}}
-		] },
-		{"id": "ginger-juice", "disabled": true, "disabledReason": "Fresh juice", "name": "Ginger Juice", "category": "Prepared Juice", "storage": "fridge", "steps": [
-			{"label": "Juiced", "life": {"amount": 4, "unit": "hours"}}
-		] },
-		{"id": "lemon-juice", "disabled": true, "disabledReason": "Fresh juice", "name": "Lemon Juice", "category": "Prepared Juice", "storage": "fridge", "steps": [
-			{"label": "Juiced", "life": {"amount": 4, "unit": "hours"}}
-		] },
+		{
+			"id": "carrot-juice",
+			"disabled": true,
+			"disabledReason": "Fresh juice",
+			"name": "Carrot Juice",
+			"category": "Prepared Juice",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Juiced", "life": { "amount": 4, "unit": "hours" } }
+			]
+		},
+		{
+			"id": "orange-juice",
+			"disabled": true,
+			"disabledReason": "Fresh juice",
+			"name": "Orange Juice (All Varieties)",
+			"category": "Prepared Juice",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Juiced", "life": { "amount": 4, "unit": "hours" } }
+			]
+		},
+		{
+			"id": "ginger-juice",
+			"disabled": true,
+			"disabledReason": "Fresh juice",
+			"name": "Ginger Juice",
+			"category": "Prepared Juice",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Juiced", "life": { "amount": 4, "unit": "hours" } }
+			]
+		},
+		{
+			"id": "lemon-juice",
+			"disabled": true,
+			"disabledReason": "Fresh juice",
+			"name": "Lemon Juice",
+			"category": "Prepared Juice",
+			"storage": "fridge",
+			"steps": [
+				{ "label": "Juiced", "life": { "amount": 4, "unit": "hours" } }
+			]
+		},
 
-		{"id": "pitaya-packs", "name": "Pitaya Packs", "aliases": ["Dragonfruit"], "category": "IQF Fruit & Bases", "storage": "freezer", "steps": [
-			{"label": "Prepped, in Dipbox", "life": {"amount": 5, "unit": "days"}}
-		] },
-		{"id": "bowl-base", "name": "Pre-Made Bowl Base", "detail": "Açaí Base, Dragonfruit Base", "aliases": ["Açaí Base", "Dragonfruit Base"], "category": "IQF Fruit & Bases", "storage": "freezer", "steps": [
-			{"label": "Made", "life": {"amount": 48, "unit": "hours"}, "note": "Day 2: mix into new batch, use first, discard end of day."}
-		] }
+		{
+			"id": "pitaya-packs",
+			"name": "Pitaya Packs",
+			"aliases": ["Dragonfruit"],
+			"category": "IQF Fruit & Bases",
+			"storage": "freezer",
+			"steps": [
+				{
+					"label": "Prepped, in Dipbox",
+					"life": { "amount": 5, "unit": "days" }
+				}
+			]
+		},
+		{
+			"id": "bowl-base",
+			"name": "Pre-Made Bowl Base",
+			"detail": "Açaí Base, Dragonfruit Base",
+			"aliases": ["Açaí Base", "Dragonfruit Base"],
+			"category": "IQF Fruit & Bases",
+			"storage": "freezer",
+			"steps": [
+				{
+					"label": "Made",
+					"life": { "amount": 48, "unit": "hours" },
+					"note": "Day 2: mix into new batch, use first, discard end of day."
+				}
+			]
+		}
 	]
 }
