@@ -54,7 +54,7 @@
 		},
 		{
 			"id": "almondmilk",
-			"name": "Almond milk",
+			"name": "Almond Milk",
 			"category": "Milks",
 			"storage": "fridge",
 			"steps": [
@@ -106,7 +106,7 @@
 		},
 		{
 			"id": "hand-mixed-soymilk",
-			"name": "Hand Mixed Soymilk",
+			"name": "Hand Mixed Soy Milk",
 			"category": "Hand-Mixed",
 			"storage": "fridge",
 			"steps": [
@@ -115,7 +115,7 @@
 		},
 		{
 			"id": "oatmilk",
-			"name": "Oatmilk",
+			"name": "Oat Milk",
 			"category": "Milks",
 			"storage": "fridge",
 			"steps": [
@@ -124,7 +124,7 @@
 		},
 		{
 			"id": "soymilk-concentrate",
-			"name": "Soymilk Concentrate",
+			"name": "Soy Milk Concentrate",
 			"category": "Milks",
 			"storage": "fridge",
 			"steps": [
@@ -133,7 +133,7 @@
 		},
 		{
 			"id": "vanilla-coconutmilk",
-			"name": "Vanilla Coconutmilk",
+			"name": "Vanilla Coconut Milk",
 			"category": "Milks",
 			"storage": "fridge",
 			"steps": [
@@ -503,7 +503,7 @@
 		},
 		{
 			"id": "blueberries",
-			"name": "Fresh blueberries",
+			"name": "Blueberries",
 			"category": "Fresh Produce",
 			"storage": "fridge",
 			"steps": [
@@ -536,7 +536,7 @@
 		},
 		{
 			"id": "ginger-puree",
-			"name": "Ginger puree",
+			"name": "Ginger Puree",
 			"category": "Fresh Produce",
 			"storage": "fridge",
 			"steps": [
@@ -602,7 +602,7 @@
 		},
 		{
 			"id": "strawberries",
-			"name": "Fresh strawberries",
+			"name": "Strawberries (whole)",
 			"aliases": ["Strawberry"],
 			"category": "Fresh Produce",
 			"storage": "fridge",
@@ -622,7 +622,7 @@
 		},
 		{
 			"id": "strawberries-sliced",
-			"name": "Sliced strawberries",
+			"name": "Strawberries (sliced)",
 			"aliases": ["Strawberry"],
 			"category": "Fresh Produce",
 			"storage": "fridge",
