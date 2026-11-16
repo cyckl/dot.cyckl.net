@@ -54,7 +54,7 @@
 		},
 		{
 			"id": "almondmilk",
-			"name": "Almondmilk",
+			"name": "Almond milk",
 			"category": "Milks",
 			"storage": "fridge",
 			"steps": [
@@ -224,6 +224,7 @@
 			"name": "Coconut Whip",
 			"category": "Thaw & Serve",
 			"storage": "fridge",
+			"aliases": ["Cocowhip"],
 			"steps": [
 				{
 					"label": "Thawed or opened",
@@ -356,6 +357,8 @@
 		{
 			"id": "coconut-flakes-fridge",
 			"name": "Coconut Flakes",
+			"disabled": true,
+			"disabledReason": "Not stocked",
 			"category": "Toppings",
 			"storage": "fridge",
 			"steps": [
@@ -404,6 +407,7 @@
 			"name": "Chocolate Moo'd Powder",
 			"category": "Misc.",
 			"storage": "dry",
+			"aliases": ["Coco Powder"],
 			"steps": [
 				{
 					"label": "Put in Cambro",
@@ -454,6 +458,8 @@
 		{
 			"id": "steel-cut-oats",
 			"name": "Steel-Cut Oats",
+			"disabled": true,
+			"disabledReason": "Not stocked",
 			"category": "Misc.",
 			"storage": "dry",
 			"steps": [
@@ -469,6 +475,8 @@
 		{
 			"id": "thawed-pineapple",
 			"name": "Thawed Pineapple",
+			"disabled": true,
+			"disabledReason": "Not stocked",
 			"category": "Misc.",
 			"storage": "fridge",
 			"steps": [
@@ -495,7 +503,7 @@
 		},
 		{
 			"id": "blueberries",
-			"name": "Blueberries, whole",
+			"name": "Fresh blueberries",
 			"category": "Fresh Produce",
 			"storage": "fridge",
 			"steps": [
@@ -528,7 +536,7 @@
 		},
 		{
 			"id": "ginger-puree",
-			"name": "Ginger, puree",
+			"name": "Ginger puree",
 			"category": "Fresh Produce",
 			"storage": "fridge",
 			"steps": [
@@ -536,7 +544,15 @@
 					"label": "Thawed in walk-in",
 					"life": { "amount": 21, "unit": "days" }
 				},
-				{ "label": "Opened", "life": { "amount": 21, "unit": "days" } }
+				{
+					"label": "Opened",
+					"disabled": true,
+					"disabledReason": "Not dotted at this store",
+					"life": {
+						"amount": 21,
+						"unit": "days"
+					}
+				}
 			]
 		},
 		{
@@ -586,7 +602,7 @@
 		},
 		{
 			"id": "strawberries",
-			"name": "Strawberries, whole",
+			"name": "Fresh strawberries",
 			"aliases": ["Strawberry"],
 			"category": "Fresh Produce",
 			"storage": "fridge",
@@ -606,7 +622,7 @@
 		},
 		{
 			"id": "strawberries-sliced",
-			"name": "Strawberries, sliced",
+			"name": "Sliced strawberries",
 			"aliases": ["Strawberry"],
 			"category": "Fresh Produce",
 			"storage": "fridge",
