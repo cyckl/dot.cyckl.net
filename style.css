@@ -164,10 +164,9 @@ button.compact { width: auto; margin: 0; padding: 5px 12px; }
 }
 .sticker-day {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	justify-content: center;
 	height: 34%;
-	padding-bottom: 1px;
 	background: var(--dot);
 	color: var(--dot-ink);
 	font-size: calc(var(--size) * 0.2);
