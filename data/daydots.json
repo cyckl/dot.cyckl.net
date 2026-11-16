@@ -1,12 +1,12 @@
 {
 	"source": "June 2026 Shelf-Life Chart",
 	"dotColors": {
-		"Mon": { "name": "Blue", "hex": "#1f5fd1" },
-		"Tue": { "name": "Yellow", "hex": "#f2c300" },
-		"Wed": { "name": "Red", "hex": "#d42a2a" },
-		"Thu": { "name": "Brown", "hex": "#7b4a24" },
-		"Fri": { "name": "Green", "hex": "#2b9a46" },
-		"Sat": { "name": "Orange", "hex": "#f07c12" },
+		"Mon": { "name": "Blue", "hex": "#02ADEF" },
+		"Tue": { "name": "Yellow", "hex": "#FEE119" },
+		"Wed": { "name": "Red", "hex": "#D4292A" },
+		"Thu": { "name": "Brown", "hex": "#7C4300" },
+		"Fri": { "name": "Green", "hex": "#019E5A" },
+		"Sat": { "name": "Orange", "hex": "#F68937" },
 		"Sun": { "name": "Black", "hex": "#111111" }
 	},
 	"searchNicknames": {
