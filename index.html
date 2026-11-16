@@ -8,7 +8,8 @@
 	</head>
 	<body>
 		<main>
-			<div class="dd-head">
+			<!-- Hidden: users found the header and colour strip confusing. Remove "hidden" to bring them back. -->
+			<div class="dd-head" hidden>
 				<div>
 					<span class="muted small">Opened or prepped now</span>
 					<h1 id="dd-now"></h1>
@@ -16,7 +17,7 @@
 				<span class="muted small">From the <span id="dd-source"></span></span>
 			</div>
 
-			<div id="dd-strip" class="dd-strip" aria-label="Day-dot colour for today and the next 7 days"></div>
+			<div id="dd-strip" class="dd-strip" hidden aria-label="Day-dot colour for today and the next 7 days"></div>
 
 			<div class="dd-tools">
 				<div id="dd-filters" class="dd-filters" role="group" aria-label="Storage">
